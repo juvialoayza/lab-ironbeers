@@ -1,15 +1,13 @@
 <div>
-    <h3>Beer List</h3>
 
-    <ol>
+    <div id="beer-list">
         {{#each beersFromApi}}
-        <li><img src="{{this.image_url}}" alt="beer" width="35px">
+        <ol id="beer-li"><img src="{{this.image_url}}" alt="beer" width="35px">
             <ul>
-                <li id="beerName">Nombre: {{this.name}}</li>
-                <li id="beerDesc">Descripción: {{this.description}}</li>
-                <li id="beerTag">Slogan: {{this.tagline}}</li>
+                <h3 id="beerName">{{this.name}}</h3>
+                <h4 id="beerDesc">Description:</h4>{{this.description}}
+                <p id="beerTag">{{this.tagline}}</p>
             </ul>
-        </li>
+        </ol>
         {{/each}}
-    </ol>
 </div>
